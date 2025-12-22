@@ -14,19 +14,18 @@ const Footer = () => {
     <footer className="bg-black text-white pt-16 pb-8 border-t border-gray-900">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-          {/* Brand Column - Updated with Logo */}
-          <div className="col-span-1 md:col-span-1">
-            <div className="flex flex-col items-start">
-              {/* Logo added here */}
+          {/* Brand Column */}
+          <div className="col-span-1 md:col-span-1 text-center md:text-left">
+            <div className="flex flex-col items-center md:items-start">
               <img
                 src={logo}
                 alt="D S Motors Logo"
-                className="h-7 w-auto mb-4 object-contain"
+                className="h-10 w-auto mb-4 object-contain"
               />
               <span className="text-2xl font-black tracking-tighter uppercase mb-4">
                 D S <span className="text-red-600">Motors</span>
               </span>
-              <p className="text-gray-500 text-sm leading-relaxed">
+              <p className="text-gray-500 text-sm leading-relaxed max-w-xs md:max-w-none">
                 The ultimate destination for premium bike restorations and
                 precision engine engineering in Heartland.
               </p>
@@ -34,7 +33,7 @@ const Footer = () => {
           </div>
 
           {/* Quick Links Column */}
-          <div className="col-span-1">
+          <div className="col-span-1 text-center md:text-left">
             <h4 className="text-xs font-black uppercase tracking-[0.2em] text-red-600 mb-6">
               Navigation
             </h4>
@@ -72,13 +71,15 @@ const Footer = () => {
           </div>
 
           {/* Social Column */}
-          <div className="col-span-1">
+          <div className="col-span-1 text-center md:text-left">
             <h4 className="text-xs font-black uppercase tracking-[0.2em] text-red-600 mb-6">
               Follow Us
             </h4>
-            <div className="flex gap-4">
+            <div className="flex gap-4 justify-center md:justify-start">
               <a
                 href="https://web.facebook.com/dsmotors.pvt"
+                target="_blank"
+                rel="noreferrer"
                 className="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center hover:bg-red-600 transition-all"
               >
                 <Facebook size={18} />
@@ -90,7 +91,9 @@ const Footer = () => {
                 <Instagram size={18} />
               </a>
               <a
-                href="https://l.facebook.com/l.php?u=https%3A%2F%2Fyoutube.com%2Fchannel%2FUCOQzLE0ifK9ElcmIvA4ePYQ%3Ffbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExRFVBUkh6a2U5Y3ZvcDI1cnNydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR7z-Nc6elf56lPhLu0VgAu9kQxLHtL0_fYEQ_dBfFUhDEZfrlvc6ApcxmwI0Q_aem_uw9v0w3H9GVeOoIGyF0S9Q&h=AT2RU7IMNYpfDci5IaoRx33cJ4BdhMopSzblmsdqGgTHbZZWvSBolmgA9p8IMh7aWNSOcviVaRdie6yRXIFZL5uoSDT7zu6eyXTK9Qgs9zXHD0fQsAnfs2kCzmwzOW23Wnuri4VYPomKcZF9uCdm6A"
+                href="https://youtube.com/@dsmotors"
+                target="_blank"
+                rel="noreferrer"
                 className="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center hover:bg-red-600 transition-all"
               >
                 <Youtube size={18} />
@@ -111,21 +114,24 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-900 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-gray-600 text-[10px] uppercase tracking-widest font-bold">
+        <div className="border-t border-gray-900 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-center">
+          <p className="text-gray-600 text-[10px] uppercase tracking-widest font-bold w-full md:w-auto">
             © {currentYear} D S Motors Heartland. All Rights Reserved.
           </p>
 
-          <div className="flex items-center gap-2">
-            <span className="text-gray-600 text-[10px] uppercase tracking-widest font-bold">
-              Developed by
-            </span>
-            <span className="text-white text-[10px] uppercase tracking-[0.3em] font-black group cursor-pointer">
+          <div className="flex items-center gap-2 text-[10px] uppercase tracking-widest font-bold">
+            <span className="text-gray-600">Developed by</span>
+            <a
+              href="https://astrosofttech.dev"
+              target="_blank"
+              rel="noreferrer"
+              className="text-white tracking-[0.3em] font-black group"
+            >
               Astrosoft{" "}
               <span className="text-blue-300 group-hover:text-white transition-colors">
                 Technologies
               </span>
-            </span>
+            </a>
           </div>
         </div>
       </div>
