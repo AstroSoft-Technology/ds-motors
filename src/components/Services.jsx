@@ -16,7 +16,7 @@ const Services = () => {
       img: engineRepair,
     },
     {
-      title: "Alowell Polish",
+      title: "Alloy Wheel Polish",
       desc: "Specialized treatment for Alloy wheels to achieve a mirror finish.",
       isComparison: true,
       beforeImg: alloyBefore,
@@ -34,7 +34,7 @@ const Services = () => {
     },
     {
       title: "Bike Service",
-      desc: "Comprehensive maintenance and safety checks.",
+      desc: "A 40-point comprehensive inspection including oil changes, brake adjustments, chain tensioning, fuel system cleaning, and electrical health checks to ensure peak performance and rider safety.",
       img: bikeService,
     },
   ];

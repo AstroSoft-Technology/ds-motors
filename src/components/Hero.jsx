@@ -26,14 +26,25 @@ const Hero = () => {
           D S <span className="text-red-600">MOTORS</span>
         </h1>
 
-        <p className="text-xl md:text-3xl font-light text-gray-300 mb-10 tracking-wide max-w-2xl mx-auto">
-          Precision Engine Repairs & <br className="hidden md:block" />
-          Premium{" "}
-          <span className="text-white font-semibold italic">
-            Polishing
-          </span>{" "}
-          Services
-        </p>
+        <div className="space-y-4 mb-10">
+          <p className="text-xl md:text-3xl font-light text-gray-300 tracking-wide max-w-2xl mx-auto">
+            Precision Engine Repairs & <br className="hidden md:block" />
+            Premium{" "}
+            <span className="text-white font-semibold italic">
+              Polishing
+            </span>{" "}
+            Services
+          </p>
+
+          {/* Sinhala Caption */}
+          <p className="text-lg md:text-2xl font-medium text-red-500 tracking-normal opacity-90">
+            <marquee>
+              <b>
+                සියලුම යතුරුපැදි එන්ජින් අළුත්වැඩියාව සහ පොලිෂ් කිරීමේ සේවාව.
+              </b>
+            </marquee>
+          </p>
+        </div>
 
         <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
           <a
