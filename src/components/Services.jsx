@@ -1,51 +1,100 @@
 import React from "react";
-import { Settings, Sparkles, Bike } from "lucide-react";
+
+// Import your local images here
+import engineRepair from "../assets/engine-repair.jpeg";
+import alloyBefore from "../assets/alloy-wheel-polish-before.jpeg";
+import alloyAfter from "../assets/alloy-wheel-polish-after.jpeg";
+import brassPolish from "../assets/brass-polish.jpeg";
+import galvaizedNails from "../assets/galvanized-nails.jpeg";
+import bikeService from "../assets/bike-service.jpeg";
 
 const Services = () => {
   const serviceData = [
     {
-      title: "Engine Repair",
-      desc: "Complete overhauls and tuning.",
-      img: "https://images.unsplash.com/photo-1599819811279-d5ad9cccf838?auto=format&fit=crop&q=80&w=500",
-      icon: <Settings className="text-red-600" />,
+      title: "Bike Engine Repair",
+      desc: "Expert engine repair, complete overhauls, and precision tuning.",
+      img: engineRepair,
     },
     {
-      title: "Premium Polishing",
-      desc: "Alloy wheel and Brass finishing.",
-      img: "https://images.unsplash.com/photo-1615172282427-9a57ef2d142e?auto=format&fit=crop&q=80&w=500",
-      icon: <Sparkles className="text-red-600" />,
+      title: "Alowell Polish",
+      desc: "Specialized treatment for Alloy wheels to achieve a mirror finish.",
+      isComparison: true,
+      beforeImg: alloyBefore,
+      afterImg: alloyAfter,
     },
     {
-      title: "Full Service",
-      desc: "Safety checks and maintenance.",
-      img: "https://images.unsplash.com/photo-1622185135505-2d795003994a?auto=format&fit=crop&q=80&w=500",
-      icon: <Bike className="text-red-600" />,
+      title: "Brass Polish",
+      desc: "Professional brass polishing to restore original shine and luster.",
+      img: brassPolish,
+    },
+    {
+      title: "Galvanized Nails",
+      desc: "Custom detailing and galvanized nail finishing for style.",
+      img: galvaizedNails,
+    },
+    {
+      title: "Bike Service",
+      desc: "Comprehensive maintenance and safety checks.",
+      img: bikeService,
     },
   ];
 
   return (
     <section
       id="services"
-      className="py-20 px-6 max-w-6xl mx-auto text-gray-800"
+      className="py-20 px-6 max-w-7xl mx-auto text-gray-800"
     >
-      <h2 className="text-3xl font-bold text-center mb-12">
-        Our Specialized Services
+      <h2 className="text-4xl font-black text-center mb-16 tracking-tight uppercase">
+        Our <span className="text-red-600">Specialized</span> Services
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 justify-center">
         {serviceData.map((s, i) => (
           <div
             key={i}
-            className="bg-white rounded-lg shadow-md overflow-hidden border-b-4 border-red-600 hover:shadow-xl transition"
+            className={`bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 ${
+              i >= 3 ? "lg:translate-x-1/2" : ""
+            }`}
           >
-            <img
-              src={s.img}
-              alt={s.title}
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-6 text-center flex flex-col items-center">
-              <div className="mb-4">{s.icon}</div>
-              <h3 className="text-xl font-bold mb-2">{s.title}</h3>
-              <p className="text-gray-600 text-sm">{s.desc}</p>
+            {/* Image Section */}
+            <div className="relative h-56 overflow-hidden bg-gray-200">
+              {s.isComparison ? (
+                <div className="flex h-full w-full">
+                  <div className="relative w-1/2 h-full border-r border-white">
+                    <img
+                      src={s.beforeImg}
+                      className="w-full h-full object-cover"
+                      alt="Before"
+                    />
+                    <span className="absolute bottom-2 left-2 bg-black/70 text-white text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wider">
+                      Before
+                    </span>
+                  </div>
+                  <div className="relative w-1/2 h-full">
+                    <img
+                      src={s.afterImg}
+                      className="w-full h-full object-cover"
+                      alt="After"
+                    />
+                    <span className="absolute bottom-2 right-2 bg-red-600 text-white text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wider">
+                      After
+                    </span>
+                  </div>
+                </div>
+              ) : (
+                <img
+                  src={s.img}
+                  alt={s.title}
+                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                />
+              )}
+            </div>
+
+            {/* Text Content */}
+            <div className="p-8 text-center">
+              <h3 className="text-2xl font-bold mb-3 uppercase tracking-tight text-gray-900">
+                {s.title}
+              </h3>
+              <p className="text-gray-600 leading-relaxed text-sm">{s.desc}</p>
             </div>
           </div>
         ))}
