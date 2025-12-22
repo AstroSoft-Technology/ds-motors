@@ -5,6 +5,7 @@ import Services from "./components/Services.jsx";
 import Gallery from "./components/Gallery.jsx";
 import Contact from "./components/Contact.jsx";
 import Footer from "./components/Footer.jsx";
+import FloatingWhatsApp from "./components/FloatingWhatsApp.jsx";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Gallery />
       <Contact />
       <Footer />
+      <FloatingWhatsApp />
     </div>
   );
 }

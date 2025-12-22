@@ -78,7 +78,7 @@ const Footer = () => {
             </h4>
             <div className="flex gap-4">
               <a
-                href="#"
+                href="https://web.facebook.com/dsmotors.pvt"
                 className="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center hover:bg-red-600 transition-all"
               >
                 <Facebook size={18} />
@@ -90,7 +90,7 @@ const Footer = () => {
                 <Instagram size={18} />
               </a>
               <a
-                href="#"
+                href="https://l.facebook.com/l.php?u=https%3A%2F%2Fyoutube.com%2Fchannel%2FUCOQzLE0ifK9ElcmIvA4ePYQ%3Ffbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExRFVBUkh6a2U5Y3ZvcDI1cnNydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR7z-Nc6elf56lPhLu0VgAu9kQxLHtL0_fYEQ_dBfFUhDEZfrlvc6ApcxmwI0Q_aem_uw9v0w3H9GVeOoIGyF0S9Q&h=AT2RU7IMNYpfDci5IaoRx33cJ4BdhMopSzblmsdqGgTHbZZWvSBolmgA9p8IMh7aWNSOcviVaRdie6yRXIFZL5uoSDT7zu6eyXTK9Qgs9zXHD0fQsAnfs2kCzmwzOW23Wnuri4VYPomKcZF9uCdm6A"
                 className="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center hover:bg-red-600 transition-all"
               >
                 <Youtube size={18} />
