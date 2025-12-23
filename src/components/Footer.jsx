@@ -91,7 +91,7 @@ const Footer = () => {
                 <Instagram size={18} />
               </a>
               <a
-                href="https://youtube.com/@dsmotors"
+                href="https://www.youtube.com/channel/UCOQzLE0ifK9ElcmIvA4ePYQ"
                 target="_blank"
                 rel="noreferrer"
                 className="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center hover:bg-red-600 transition-all"
@@ -116,7 +116,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-gray-900 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-center">
           <p className="text-gray-600 text-[10px] uppercase tracking-widest font-bold w-full md:w-auto">
-            © {currentYear} D S Motors Heartland. All Rights Reserved.
+            © {currentYear} D S Motors. All Rights Reserved.
           </p>
 
           <div className="flex items-center gap-2 text-[10px] uppercase tracking-widest font-bold">

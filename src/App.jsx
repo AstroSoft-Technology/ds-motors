@@ -5,6 +5,7 @@ import Services from "./components/Services.jsx";
 import Gallery from "./components/Gallery.jsx";
 import Contact from "./components/Contact.jsx";
 import Footer from "./components/Footer.jsx";
+import Reviews from "./components/Reviews.jsx";
 import FloatingWhatsApp from "./components/FloatingWhatsApp.jsx";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Hero />
       <Services />
       <Gallery />
+      <Reviews />
       <Contact />
       <Footer />
       <FloatingWhatsApp />
