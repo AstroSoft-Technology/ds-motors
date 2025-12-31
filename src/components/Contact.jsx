@@ -18,9 +18,9 @@ const Contact = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const contactNumbers = [
-    { label: "Primary Support", num: "0774000019" },
-    { label: "Technical Queries", num: "0724000019" },
-    { label: "Emergency Service", num: "0702000070" },
+    { label: "Dilshan Shalitha", num: "0774000019" },
+    { label: "Dilshan Shalitha", num: "0724000019" },
+    { label: "Dilshan Shalitha", num: "0702000070" },
   ];
 
   const handleWhatsAppSend = (e) => {

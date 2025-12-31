@@ -57,26 +57,26 @@ const ProjectSlideshow = ({ images }) => {
 const Gallery = () => {
   const allProjects = [
     {
-      id: 1,
-      vehicle: "Classic Honda CB750",
-      repairType: "Full Frame-up Restoration",
+      id: 1, // Assuming this is the third project in your list
+      vehicle: "Nissan 2.5 Ton Forklift",
+      repairType: "Full Mechanical Restoration & Custom Paint",
       description:
-        "Complete engine rebuild, frame sandblasting, and custom brass polishing on all engine covers. Restored to showroom condition with modern reliability.",
+        "Complete industrial restoration including hydraulic system overhaul, engine recalibration, and a total color transformation from faded factory orange to a premium custom finish. Sandblasted and powder-coated for maximum durability.",
       images: [
         {
-          label: "BEFORE",
+          label: "Fully restored",
           img: nissanRestoration1,
         },
         {
-          label: "IN PROGRESS",
+          label: "STRIPPED & SANDBLASTED",
           img: nissanRestoration2,
         },
         {
-          label: "ENGINE DETAIL",
+          label: "NEW COLOR FINISH",
           img: nissanRestoration3,
         },
         {
-          label: "FINAL RESULT",
+          label: "NEW COLOR FINISH",
           img: nissanRestoration4,
         },
       ],

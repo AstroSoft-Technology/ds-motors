@@ -27,7 +27,8 @@ const Footer = () => {
               </span>
               <p className="text-gray-500 text-sm leading-relaxed max-w-xs md:max-w-none">
                 The ultimate destination for premium bike restorations and
-                precision engine engineering in Heartland.
+                precision engine engineering in Millennium City Zone 3,
+                Heartland, Sri Lanka.
               </p>
             </div>
           </div>

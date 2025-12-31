@@ -5,8 +5,9 @@ import engineRepair from "../assets/engine-repair.jpeg";
 import alloyBefore from "../assets/alloy-wheel-polish-before.jpeg";
 import alloyAfter from "../assets/alloy-wheel-polish-after.jpeg";
 import brassPolish from "../assets/brass-polish.jpeg";
-import galvaizedNails from "../assets/galvanized-nails.jpeg";
+import galvaizedNails from "../assets/galvanized-nails.jpg";
 import bikeService from "../assets/bike-service.jpeg";
+import sandblastingImg from "../assets/sand-blasting.jpeg";
 
 const Services = () => {
   const serviceData = [
@@ -34,8 +35,13 @@ const Services = () => {
     },
     {
       title: "Bike Service",
-      desc: "A 40-point comprehensive inspection including oil changes, brake adjustments, chain tensioning, fuel system cleaning, and electrical health checks to ensure peak performance and rider safety.",
+      desc: "A 40-point comprehensive inspection including oil changes, brake adjustments, chain tensioning, fuel system cleaning, and electrical health checks.",
       img: bikeService,
+    },
+    {
+      title: "Industrial Sandblasting",
+      desc: "High-pressure abrasive cleaning to remove rust, old paint, and corrosion from frames and engine parts for a showroom-quality finish.",
+      img: sandblastingImg,
     },
   ];
 
@@ -47,16 +53,16 @@ const Services = () => {
       <h2 className="text-4xl font-black text-center mb-16 tracking-tight uppercase">
         Our <span className="text-red-600">Specialized</span> Services
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 justify-center">
+
+      {/* Grid Fix: Removed logic that was manually shifting the bottom row */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         {serviceData.map((s, i) => (
           <div
             key={i}
-            className={`bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 ${
-              i >= 3 ? "lg:translate-x-1/2" : ""
-            }`}
+            className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col"
           >
             {/* Image Section */}
-            <div className="relative h-56 overflow-hidden bg-gray-200">
+            <div className="relative h-56 overflow-hidden bg-gray-200 flex-shrink-0">
               {s.isComparison ? (
                 <div className="flex h-full w-full">
                   <div className="relative w-1/2 h-full border-r border-white">
@@ -89,12 +95,14 @@ const Services = () => {
               )}
             </div>
 
-            {/* Text Content */}
-            <div className="p-8 text-center">
+            {/* Text Content: Added flex-grow to ensure cards have uniform height even with different text lengths */}
+            <div className="p-8 text-center flex flex-col flex-grow">
               <h3 className="text-2xl font-bold mb-3 uppercase tracking-tight text-gray-900">
                 {s.title}
               </h3>
-              <p className="text-gray-600 leading-relaxed text-sm">{s.desc}</p>
+              <p className="text-gray-600 leading-relaxed text-sm flex-grow">
+                {s.desc}
+              </p>
             </div>
           </div>
         ))}

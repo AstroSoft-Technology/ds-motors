@@ -1,4 +1,5 @@
 import React from "react";
+import backgroundImage from "../assets/cover-photo.jpg";
 
 const Hero = () => {
   return (
@@ -10,8 +11,9 @@ const Hero = () => {
       <div
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage:
-            'url("https://images.unsplash.com/photo-1558981285-6f0c94958bb6?auto=format&fit=crop&q=80")',
+          // backgroundImage:
+          //   'url("https://images.unsplash.com/photo-1558981285-6f0c94958bb6?auto=format&fit=crop&q=80")',
+          backgroundImage: `url(${backgroundImage})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
